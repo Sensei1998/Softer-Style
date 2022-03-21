@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot ="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot ="end">
+      <ion-icon slot="icon-only" name="trash" (click)="sup(vet)"></ion-icon>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <ion-grid >
+    <ion-row>
+      <ion-col>
+        <ion-img [src]="vet?.img"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Nom: {{vet?.nom}} </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Prix: {{vet?.prix}} </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Taille: {{vet?.taille}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Categorie: {{vet?.cpltInfor?.categorie}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Status: {{vet?.cpltInfor?.statut}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Couleur: {{vet?.cpltInfor?.couleur}} </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-grid>
+  <!-- <button ion-button block (click)="addCloth()">Create</button> -->
+
+</ion-content>

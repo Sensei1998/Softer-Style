@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot ="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="addItem()" [formGroup]="form2" >
+    <ion-item>
+      <ion-label position="fixed" for="nom">Nom</ion-label>
+      <ion-input type="text" placeholder="Nom" formControlName="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" for="prix">Prix</ion-label>
+      <ion-input type="number" placeholder="Prix" formControlName="prix"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" for="taille">Taille</ion-label>
+      <ion-input type="number" placeholder="Taille" formControlName="taille"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed" for="image">Image</ion-label>
+      <ion-input type="text" placeholder="lien Image" formControlName="img"></ion-input>
+    </ion-item>
+<ion-item-group>
+      <ion-item>
+        <ion-label position="fixed" >Status solde</ion-label>
+        <ion-checkbox  formControlName="status" (ngModelChange)="onChange()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" >Categorie</ion-label>
+        <ion-select formControlName="categorie">
+          <ion-select-option value="Femme" >Femme</ion-select-option>
+          <ion-select-option value="Homme">Homme</ion-select-option>
+        </ion-select>
+        <!-- <ion-input type="text" placeholder="Categorie" formControlName="categorie"></ion-input> -->
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" >Couleur</ion-label>
+        <ion-input type="text" placeholder="Couleur" formControlName="couleur"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-button expand="full" type="submit" (click)="getId()">Ajouter un vetement</ion-button>
+  </form>
+</ion-content>
